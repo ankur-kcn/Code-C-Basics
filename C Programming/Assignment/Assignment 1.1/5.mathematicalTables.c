@@ -1,0 +1,1 @@
+//Display first mathematical tables, each table up to 10 rows? Generalise this to display first n (> 0) mathematical tables up to m (m > 0) rows.

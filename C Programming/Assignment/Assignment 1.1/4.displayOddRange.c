@@ -1,0 +1,1 @@
+//Given an input positive integer number, display odd numbers from in the range [1, n].

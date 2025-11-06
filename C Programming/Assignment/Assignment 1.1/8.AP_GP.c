@@ -1,0 +1,1 @@
+// Given the first term (a), difference/multiplier (d) and number of terms (n > 0), display the first n terms of the arithmetic/geometric progression.

@@ -1,0 +1,1 @@
+// Given two positive integer numbers n1 and n2 check if the numbers are consecutive numbers of the fibonacci sequence.

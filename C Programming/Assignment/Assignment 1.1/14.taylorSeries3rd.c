@@ -1,0 +1,1 @@
+// Compute approximate value of sin(x)/cos(x) considering first n (n > 0) terms of the Taylor series for sin(x)/cos(x)
