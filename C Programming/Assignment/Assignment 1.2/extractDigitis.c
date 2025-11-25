@@ -20,16 +20,17 @@ int main()
         int copy=org;
         int div=1;
         while(copy>=10){
-            copy=copy/10;
-            div=div*10;
+            copy=copy/10; // removes the last one
+            div=div*10; // increases the divisor as the digit count increses
         }
+
         n=org;
 
         while(div>0){
-            int digit=n/div;
+            int digit=n/div; // extract the left digit
             printf("%d\n",digit);
-            n=n%div;
-            div=div/10;
+            n=n%div;  // remove the left digit and give the rest number
+            div=div/10; //decrese the divisior with repect tot the number of digits available
         }
         
         //left to right
