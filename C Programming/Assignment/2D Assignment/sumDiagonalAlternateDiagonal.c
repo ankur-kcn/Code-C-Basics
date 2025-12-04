@@ -25,8 +25,8 @@ int main(){
           orgsum=orgsum+arr[i][i];
           altsum=altsum+arr[i][3-i-1];
     }
-    printf("The Original Diagonal Sum:%d\n",orgsum);
-    printf("The Alternate Diagonal Sum:%d\n",altsum);
+    printf("The Original Diagonal Sum: %d\n",orgsum);
+    printf("The Alternate Diagonal Sum: %d\n",altsum);
 
     return 0;
 }
