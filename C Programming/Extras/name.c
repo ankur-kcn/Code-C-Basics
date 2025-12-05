@@ -9,6 +9,7 @@ int main() {
         printf("%c\n", *p); 
         p++;                
     }
+    
 
     return 0;
 }
