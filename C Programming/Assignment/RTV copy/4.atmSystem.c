@@ -9,26 +9,26 @@
 #include<stdio.h>
  void display(){
         printf("------ Menu ------\n");
-        printf("1. Withdraw\n");
-        printf("2. Deposit\n");
+        printf("1. Deposit\n");
+        printf("2. Withdraw\n");
         printf("3. Balance Check\n");
         printf("4. Exit\n");
         printf("Choose (1-4):\n");
     }
     void deposit(float *balance){
         float amount;
-        printf("Enter the amount to Deposit: ");
+        printf("Enter the amount to Deposit: ₹");
         scanf("%f",&amount);
         if(amount<=0){
             printf("Invalid!\n");
             return;
         }
         *balance += amount;
-        printf("Updated Balance: %.2f\n",*balance);
+        printf("Updated Balance: ₹%.2f\n",*balance);
     }
     void withdraw(float *balance){
         float amount;
-        printf("Enter the amount to Withdraw: ");
+        printf("Enter the amount to Withdraw: ₹");
         scanf("%f",&amount);
         if(amount<=0){
             printf("Invalid!\n");
@@ -38,11 +38,11 @@
         printf("Insufficient Balance to Withdraw!\n");
     }
     *balance -= amount;
-    printf("Please collect your Cash: %.2f\n",amount);
-    printf("Remaining Balance: %.2f\n",*balance);
+    printf("Please collect your Cash: ₹%.2f\n",amount);
+    printf("Remaining Balance: ₹%.2f\n",*balance);
 }
 void balCheck(float *balance){
-    printf("Availaible Balance: %.2f\n",*balance);
+    printf("Availaible Balance: ₹%.2f\n",*balance);
     }
 int main(){
     int choice;
@@ -63,7 +63,7 @@ int main(){
             balCheck(&balance);
             break;
         case 4:
-            printf("Sayonara! Thanks for Using!\n");
+            printf("Balle Balle! Thanks for Using!\n");
             return 0;
         
         default:

@@ -27,12 +27,12 @@ float netSalary(int basic,float da,float hra,float pf)
 }
 void display(int basic,float da,float hra,float pf,float netSalary)
 {
-    printf("Basic Salary = %d\n",basic);
-    printf("Dearness Allowance = %.2f\n",da);
-    printf("House Rent Allowance = %.2f\n",hra);
-    printf("Provident Fund = %.2f\n",pf);
+    printf("Basic Salary = ₹%d\n",basic);
+    printf("Dearness Allowance = ₹%.2f\n",da);
+    printf("House Rent Allowance = ₹%.2f\n",hra);
+    printf("Provident Fund = ₹%.2f\n",pf);
     printf("---------------------------\n");
-    printf("Net Salary = %.2f\n",netSalary);
+    printf("Net Salary = ₹%.2f\n",netSalary);
     printf("---------------------------\n\n");
 }
 int main()
@@ -44,7 +44,7 @@ int main()
     printf("----- Enter Basic Salary of Each Employee -----\n");
     for (int i = 0; i < n; i++)
     {
-        printf("Employee %d : ", i + 1);
+        printf("Employee %d : ₹", i + 1);
         scanf("%d", &arr[i]);
     }
     printf("\n---------- Salary Slip ----------\n\n");

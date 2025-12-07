@@ -33,12 +33,12 @@ int main(){
     printf("Item\t | Quantity \t| Cost \n");
     for(int i=0;i<10;i++){
         float cost=calCost(&price[i],&qty[i]);
-        printf("%d. ₹%.2f\t%d\t%.2f\n",i+1,price[i],qty[i],cost);
+        printf("%d. ₹%.2f\t%d\t₹%.2f\n",i+1,price[i],qty[i],cost);
     }
     float Sum=0;
         Sum=calTotal(price,qty,items);
     printf("----------------------------------------\n");
-    printf("Total Billing Amount : %.2f\n",Sum);
+    printf("Total Billing Amount : ₹%.2f\n",Sum);
     printf("----------------------------------------\n");
     return 0;
 }
