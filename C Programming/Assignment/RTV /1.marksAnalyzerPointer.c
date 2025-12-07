@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-float calAvg(int *m, int n)
+float calcuAvg(int *m, int n)
 {
     int sum = 0;
     for (int i = 0; i < n; i++)
@@ -22,32 +22,32 @@ float calAvg(int *m, int n)
     return (float)sum / n;
 }
 
-int maxScore(int *m, int n)
+int highestScore(int *m, int n)
 {
-    int max = *m;
+    int high = *m;
     for (int i = 0; i < n; i++)
     {
-        if (*(m + i) > max)
+        if (*(m + i) > high)
         {
-            max = *(m + i);
+            high = *(m + i);
         }
     }
-    return max;
+    return high;
 }
-int minScore(int *m, int n)
+int lowestScore(int *m, int n)
 {
-    int min = *m;
+    int low = *m;
     for (int i = 0; i < n; i++)
     {
-        if (*(m + i) < min)
+        if (*(m + i) < low)
         {
-            min = *(m + i);
+            low = *(m + i);
         }
     }
-    return min;
+    return low;
 }
 
-void gradeDistri(int *m, int n)
+void gradeDistribution(int *m, int n)
 {
     int A = 0, B = 0, C = 0, D = 0, E = 0, F = 0;
     for (int i = 0; i < n; i++)
@@ -85,15 +85,15 @@ int main()
     }
 
 
-    float avg = calAvg(marks, n);
-    int highest = maxScore(marks, n);
-    int lowest = minScore(marks, n);
+    float avg = calcuAvg(marks, n);
+    int highest = highestScore(marks, n);
+    int lowest = lowestScore(marks, n);
 
     printf("\n----- Grade Distribution of %d Students -----\n", n);
-    gradeDistri(marks, n);
+    gradeDistribution(marks, n);
 
-    printf("\nAverage Marks = %.2f\n", avg);
-    printf("Highest Marks = %d\n", highest);
-    printf("Lowest Marks = %d\n", lowest);
+    printf("\nAverage Marks : %.2f\n", avg);
+    printf("Highest Marks : %d\n", highest);
+    printf("Lowest Marks : %d\n", lowest);
     return 0;
 }
