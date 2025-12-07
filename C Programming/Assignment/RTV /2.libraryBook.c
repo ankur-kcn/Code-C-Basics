@@ -13,7 +13,7 @@ void addBook(int *b){
     printf("Enter Book Id to Add: ");
     scanf("%d",&id);
     for(int i=0;i< BOOK;i++){
-        if(*(b+i)==0){
+        if(*(b+i)==0){ // b[i]
             *(b+i)=id;
             printf("Book %d Added at Position %d\n", id, i+1);
             return;
@@ -49,7 +49,7 @@ void searchBook(int *b){
 void avaialableBook(int *b) {
     printf("\n----- Available Books -----\n");
     for (int i = 0; i < BOOK; i++) {
-        if (*(b + i) != 0) {   
+        if (*(b + i) != 0) {   // prints only when it's not empty
             printf("Index %d : Book ID %d\n", i+1, *(b + i));
         }
     }
