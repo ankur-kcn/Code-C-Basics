@@ -1,0 +1,32 @@
+// rotate the given array 'a' by k steps, where k is non-negative
+
+#include<stdio.h>
+void reverse(int arr[],int si,int ei){
+    int temp;
+    for(int i=si,j=ei;i<j;i++,j--){
+        temp = arr[i];
+        arr[i] =arr[j];
+        arr[j] = temp;
+    }
+}
+int main(){
+    int a;
+    printf("Enter the array size : ");
+    scanf("%d",&a);
+
+    int k=3;
+    k=k%a;
+
+    int arr[a];
+    printf("Enter the array elemetns : \n");
+    for(int i=0;i<a;i++){
+        scanf("%d",&arr[i]);
+    }
+    reverse(arr,0,a-1);
+    reverse(arr,0,k-1);
+    reverse(arr,k,a-1);
+    for(int i=0;i<a;i++){
+        printf("%d  ",arr[i]);
+    }
+    return 0;
+}
