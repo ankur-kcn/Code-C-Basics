@@ -1,43 +1,51 @@
 // multiplication of two matrices given by the user
 
 #include<stdio.h>
-int main(){
-    int r1,c1;
-    printf("Enter the no. of rows: ");
-    scanf("%d",&r1);
-    printf("Enter the no. of columns: ");
-    scanf("%d",&c1);
-    int a[r1][c1];
-    printf("Enter the array elements of the First Array: \n");
-    for(int i=0;i<r1;i++){
-        for(int j=0;i<c1;i++){
-            scanf("%d",a[i][j]);
-        }
-    }
-    int r2,c2;
-    printf("Enter the no. of rows: ");
-    scanf("%d",&r2);
-    printf("Enter the no. of columns: ");
-    scanf("%d",&c2);
-    int b[r2][c2],mul[r1][c2];
-    printf("Enter the array elements of the Second Array: \n");
-    for(int i=0;i<r2;i++){
-        for(int j=0;i<c2;i++){
-            scanf("%d",b[i][j]);
-        }
-    }
-    for(int i=0;i<r;i++){
-        for(int j=0;j<c;j++){
 
+int main(){
+    int n;
+
+    printf("Enter the order of the square matrix: ");
+    scanf("%d", &n);
+
+    int a[n][n], b[n][n], mul[n][n];
+
+    printf("Enter the elements of the First Matrix:\n");
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            scanf("%d", &a[i][j]);
         }
     }
-    printf("\nThe Multiplication Result : ");
-    for(int i=0;i<r1;i++){
-        for(int j=0;i<c2;i++){
-            printf("%d  ",mul[i][j]);
+
+    printf("Enter the elements of the Second Matrix:\n");
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            scanf("%d", &b[i][j]);
+        }
+    }
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            mul[i][j] = 0;
+        }
+    }
+
+    // multiplication logic
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            for(int k = 0; k < n; k++){
+                mul[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+
+    printf("\nThe Multiplication Result:\n");
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            printf("%d  ", mul[i][j]);
         }
         printf("\n");
     }
-    
+
     return 0;
 }
