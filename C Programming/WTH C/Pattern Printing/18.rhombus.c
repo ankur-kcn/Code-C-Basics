@@ -1,7 +1,8 @@
-//    *
-//   **
-//  ***
-// ****
+//     *****
+//    *****
+//   *****
+//  *****
+// *****
 
 #include<stdio.h>
 int main(){
@@ -13,10 +14,9 @@ int main(){
             for(int j=1;j<=n-i;j++){ // for spaces
                 printf(" ");
             }
-                for(int k=1;k<=i;k++){
+                for(int k=1;k<=n;k++){ // width stays constant which is required for rhombus
                     printf("*");
                 }
-
         printf("\n");
     } 
     return 0;
